@@ -16,7 +16,6 @@ class UrlShortenTinyurl:
             url = self.URL + "?" \
                 + urllib.parse.urlencode({"url": url_long})
             res = requests.get(url)
-            print(res)
             print("STATUS CODE:", res.status_code)
             print("   LONG URL:", url_long)
             print("  SHORT URL:", res.text)
